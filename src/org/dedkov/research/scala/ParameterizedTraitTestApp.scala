@@ -95,37 +95,37 @@ object ParameterizedTraitTestApp extends App {
 
   object MainObj01 extends MyTrait01 {
     def printSomeMethod() = {
-      println(someMethod(1))
+      println(this.getClass.getSimpleName + ": " + someMethod(1))
     }
   }
 
   object MainObj02 extends MyTrait02 {
     def printSomeMethod() = {
-      println(someMethod(1))
+      println(this.getClass.getSimpleName + ": " + someMethod(1))
     }
   }
 
   object MainObj04 extends MyTrait04 {
     def printSomeMethod() = {
-      println(someMethod(1))
+      println(this.getClass.getSimpleName + ": " + someMethod(1))
     }
   }
 
   object MainObj06 extends MyTrait06 {
     def printSomeMethod() = {
-      println(someMethod(1))
+      println(this.getClass.getSimpleName + ": " + someMethod(1))
     }
   }
 
   object MainObj07 extends MyTrait07 {
     def printSomeMethod() = {
-      println(someMethod()(1))
+      println(this.getClass.getSimpleName + ": " + someMethod()(1))
     }
   }
 
   object MainObj08 extends MyTrait08 {
     def printSomeMethod() = {
-      println(someMethod(1))
+      println(this.getClass.getSimpleName + ": " + someMethod(1))
     }
   }
 
@@ -137,4 +137,13 @@ object ParameterizedTraitTestApp extends App {
   MainObj06.printSomeMethod()
   MainObj07.printSomeMethod()
   MainObj08.printSomeMethod()
+
+
+  /*
+  MainObj01$: ()
+  MainObj02$: ()
+  MainObj04$: s
+  MainObj06$: s
+  MainObj07$: s
+  MainObj08$: s*/
 }
